@@ -17,14 +17,14 @@
 int main() {
 
 //εισαγωγή προβλήματος, με την επιθυμητή ακρίβεια για την λύση
-boundary problem(100);
+boundary example(100);
 // εισαγωγή 4 συνοριακών συνθηκών σε κάθε κατεύθυνση
-problem.convection(N,T_inf,K_steel,h);
-problem.conduction(S,T_0);
-problem.adiabatic(W);
-problem.adiabatic(E);
+example.convection(N,T_inf,K_steel,h);
+example.conduction(S,T_0);
+example.adiabatic(W);
+example.adiabatic(E);
 // επίλυση του προβλήματος και αποθήκευση αποτελεσμάτων στο επιθυμητό αρχείο
-problem.solver("results.txt");
+example.solver("results.txt");
 
 return 0;
 }
