@@ -17,7 +17,7 @@
 int main() {
 
 //εισαγωγή προβλήματος, με την επιθυμητή ακρίβεια για την λύση
-boundary example(100);
+boundary example(15);
 // εισαγωγή 4 συνοριακών συνθηκών σε κάθε κατεύθυνση
 example.convection(N,T_inf,K_steel,h);
 example.conduction(S,T_0);
