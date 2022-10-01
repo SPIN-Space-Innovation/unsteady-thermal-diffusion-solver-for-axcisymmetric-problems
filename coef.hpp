@@ -5,9 +5,8 @@
 #include <string>
 #include <array>
 #include <vector>
-#include <Eigen/Dense>
 
-
+double pi = 2*acos(0);
 
 double u_inf=150, // ταχύτητα ρευστού
         D = 100e-3, // εξωτερική διάμετρος σωλήνα
@@ -18,7 +17,10 @@ double u_inf=150, // ταχύτητα ρευστού
         Pr = 0.707, // αριθμός Prandl του ρευστού
         k = 26.3e-3, // αγωγιμότητα ρευστού
         L = 0.4, // μήκος σωλήνα
-        t = 45e-3; // πάχος σωλήνα
+        t = 45e-3, // πάχος σωλήνα
+        density_steel = 7850, // πυκνότητα χάλυβα
+        C_p_steel = 502.416, // ειδική θερμοχωρητικότητα ανοξείδωτου χάλυβα 304
+        diffusivity_steel = K_steel/(density_steel*C_p_steel); 
 
 double Re = u_inf * D / nu; //αριθμός Reynolds του κινούμενου ρευστού
 double Nu = 0.3 + 0.62 * pow(Re, 0.5) * pow(Pr, 1 / 3) * pow(1 + pow(Re / 282000, 5 / 8), 0.8) *
